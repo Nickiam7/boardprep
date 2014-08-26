@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BoardMembers</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+$(function(){
+  $('#Container').mixItUp();  
+  $('.pop').popup({on: 'click'});
+    $('.poop').popup({on: 'hover'});
+});
+</script>
+</head>
+
+<body >
+
+<div class="ui grid">
+  <div class="column">
+   <%= yield %>
+  </div>
+</div>
+
+<%= render 'layouts/footer' %>
+
+</body>
+</html>

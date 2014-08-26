@@ -1,0 +1,43 @@
+
+<h1>Current Members</h1>
+
+<table class="ui table collapsing segment">
+  <thead>
+    <tr>
+      <th>Photo</th>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Sort</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @members.each do |member| %>
+      <tr>
+        <td><%= image_tag member.photo.url %></td>
+        <td><strong><%= member.name %></strong></td>
+        <td><strong><%= member.title %></strong></td>
+        <td><strong><%= member.sort %></strong></td>
+         <td><div class="ui tiny buttons">
+          <div class="ui button"><%= link_to 'Edit', edit_member_path(member) %></div>
+         <div class="or"></div>
+          <div class="ui button "><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+         </div></td>
+      </tr>
+    <% end %>
+  </tbody>
+    <tfoot>
+    <tr>
+    	<th colspan="7">
+    		<div class="ui buttons">
+            <%= link_to 'New Member', new_member_path, class: 'ui button linkedin' %>
+		    <%= link_to 'Sort List', root_path, class: 'ui button twitter' %>
+            </div> 
+        </th>
+    </tr>
+    </tfoot>	
+</table>
+
+<br>
+

@@ -1,0 +1,28 @@
+<div class="ui vertically divided stackable grid">
+
+    <div class="five wide column floated left">
+      <img src="http://ache.org/images/logo.png" />
+    </div>
+
+    <div class="five wide column floated aligned right">
+        <div class="ui icon twitter button poop sort active" data-content="Shuffle" data-position="left center" data-sort="random" style="margin-top:20px;"><i class="refresh icon"></i></div>
+          <div class="ui compact menu blue" style="margin-top:20px;">
+            <a class="item filter active" data-filter="all">All</a>
+            <a class="item filter" data-filter=".chair">Chairman</a>
+            <a class="item filter" data-filter=".gov">Governors</a>
+          </div>
+    </div> 
+</div>
+
+<div class="ui segment stacked aligned center" style="margin-bottom:50px;">
+<div id="Container">
+    <% @members.each do |member| %>
+      <div class="mix ui segment raised <%="#{member.sort}" %>" style="margin:10px;">
+        <%= image_tag member.photo.url, class: "ui pop rounded image", data: {title: "#{member.name}", content: "#{member.title}"} %>
+      </div>
+    <% end %>
+</div>
+</div>
+<!--<%= link_to 'New Member', new_member_path, class: 'ui button' %> 
+<%= link_to 'List', members_list_path, class: 'ui button blue' %>-->
+

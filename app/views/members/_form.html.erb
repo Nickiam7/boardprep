@@ -1,0 +1,70 @@
+<script>
+$(function() {
+  $('.ui.selection.dropdown').dropdown();
+});
+</script>
+
+
+<%= form_for(@member) do |f| %>
+  <% if @member.errors.any? %>
+    <div id="error_explanation" class="ui red message">
+      <h2><%= pluralize(@member.errors.count, "error") %> prohibited this member from being saved:</h2>
+
+      <ul>
+      <% @member.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <div class="ui form">
+    <div class="field">
+     <%= f.text_field :name, placeholder: 'Enter Fullname and Credentials' %>
+   </div>
+  </div>
+    <div class="ui form">
+     <div class="field">
+    <%= f.text_field :title, placeholder: 'Enter ACHE Title' %>
+     </div>
+  </div>
+
+
+
+
+
+<!--THIS DOES NOT WORK YET- - :( 
+===========================================
+
+<div class="ui selection dropdown">
+  <input name="sort" type="hidden">
+    <div class="default text">Sort by</div>
+     <i class="dropdown icon"></i>
+      <select class="menu" id="member_sort" name="member[sort]">
+        <option class="item" value="chair">Chairman</option>
+        <option class="item" value="gov">Governor</option>
+       </select>
+</div>   
+
+<div class="ui pointing left label">Double Check this is Right!</div>
+<br><br>
+==============================================-->
+
+   <div class="ui form">
+    <div class="ui six fields">
+       <div class="field"  style="margin-right: 30px;">
+         <%= f.select(:sort, options_for_select([['Chairman', 'chair'],['Governor', 'gov']])) %><br>
+        <div class="ui pointing black label">Sort by</div> 
+      </div>  
+
+      <div class="field">
+         <%= f.file_field :photo %><br>
+         <div class="ui pointing black label">Upload Photo</div>
+      </div>
+    </div>
+   </div>
+<br><br>
+  <div class="actions">
+    <%= f.submit class: 'ui button green mini' %>
+  </div>
+<% end %>
