@@ -1,9 +1,12 @@
 <h1>Edit Board Member</h1>
 
-<div class="ui grid">
-	<div class="ui five wide column">
+
+<div class="ui grid aligned center">
+	<div class="column ten wide">
+		<div class="ui segment stacked">
 	 <%= render 'form' %>
-    </div>
+		</div>
+	</div> 
 </div>
 
-<%= link_to 'Back', members_list_path %>
+<%= link_to 'Back', members_list_path, class: 'ui button basic mini' %>

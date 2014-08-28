@@ -1,5 +1,8 @@
 
-<h1>Current Members</h1>
+<h1 style="text-align:left;">Current Members</h1>
+
+<div class="ui grid">
+  <div class="column eleven wide">
 
 <table class="ui table collapsing segment">
   <thead>
@@ -32,12 +35,23 @@
     	<th colspan="7">
     		<div class="ui buttons">
             <%= link_to 'New Member', new_member_path, class: 'ui button linkedin' %>
-		    <%= link_to 'Sort List', root_path, class: 'ui button twitter' %>
+		        <%= link_to 'Sort List', root_path, class: 'ui button twitter' %>
             </div> 
         </th>
     </tr>
     </tfoot>	
 </table>
+</div>
+
+
+  <div class="column four wide" style="position:fixed;">
+       <div class="ui buttons">
+            <%= link_to 'New Member', new_member_path, class: 'ui button linkedin' %>
+            <%= link_to 'Sort List', root_path, class: 'ui button twitter' %>
+       </div> 
+  </div>
+
+  </div>
 
 <br>
 
