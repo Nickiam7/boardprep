@@ -1,13 +1,44 @@
+a {
+  color: gray;
+  text-decoration: none;
+  &:visited {
+    color: gray;
+    text-decoration: none;
+  }
+  &:hover {
+
+    text-decoration: none;
+  }
+}
+
 @import "semantic-ui";
 
-body {margin:0; border-top: 3px solid #4092cc; color: #5c6166; background: url('http://www.ache.org/images/bg-gray.png');}
+body {
+    margin:0; 
+    border-top: 3px solid #4092cc; 
+    color: #5c6166; 
+    background: url('http://www.ache.org/images/bg-gray.png');
+    color: #333;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 0.8em;
+    }
 
-#Container .mix{display: none;}
+.ui.table {
+    font-size: 1em;
+}
+
+.ui.grid > .column, .ui.grid > .row > .column {
+    font-size: 13px;
+}
+
+#Container .mix{
+    display: none;
+    }
 
 .ui.menu .blue.active.item, .ui.blue.menu .active.item {
     border-color: #6ecff5 !important;
     color: #4092cc !important;
-    }
+}
 
 .ui.segment {
     background-color: #ffffff;
@@ -17,7 +48,7 @@ body {margin:0; border-top: 3px solid #4092cc; color: #5c6166; background: url('
     margin: 1em 0;
     padding: 0.5em;
     position: relative;
-    }
+}
 
  .margr {
    margin-right: 25px;
@@ -26,3 +57,15 @@ body {margin:0; border-top: 3px solid #4092cc; color: #5c6166; background: url('
  .ui.blue.segment {
   border-top: 0.2em solid #4092cc;
  }
+
+ #notice {
+  color: green;
+}
+
+.field_with_errors{
+  padding: 1px;
+  background-color: #a95252;
+  border-color: #e7bebe #e7bebe #e7bebe;
+  box-shadow: 0.3em 0 0 0 #d95c5c inset;
+  border-radius: 5px;
+}
