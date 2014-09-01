@@ -7,7 +7,8 @@
     DoCM
   </div>
   <div class="item">
-    <%= link_to 'Admin', members_list_path, class: 'ui button basic mini' %> 
+  	<%= link_to 'Logout', destroy_admin_session_path, class: 'ui button basic mini', method: :delete %>
+    <%= link_to 'Admin', new_admin_session_path, class: 'ui button basic mini' %> 
    </div>
 </div>
 </div>

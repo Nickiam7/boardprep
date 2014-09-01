@@ -20,7 +20,10 @@ $(function(){
 
 <div class="ui grid aligned center">
   <div class="column fourteen wide">
-   <%= yield %>
+  	<% flash.each do |name, msg| %>
+  		<%= content_tag(:div, msg, class: "ui message blue") %>
+  	<% end %>    
+      <%= yield %>
   </div>
 </div>
 
