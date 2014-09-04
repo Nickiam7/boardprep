@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BoardMembers</title>
+  <title>ACHE Chairman and Board Members</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -16,18 +16,16 @@ $(function(){
 </script>
 </head>
 
-<body >
-
-<div class="ui grid aligned center">
-
-  	<% flash.each do |name, msg| %>
-  		<%= content_tag(:div, msg, class: "ui message blue") %>
-  	<% end %>    
-      <%= yield %>
-
-</div>
-
-<%= render 'layouts/footer' %>
-
+<body>
+  <div class="ui grid aligned center">
+    <div class="column twelve wide">
+     <!--Devise Flash Div-->
+    	<% flash.each do |name, msg| %>
+    		<%= content_tag(:div, msg, class: "ui message blue") %>
+    	<% end %> 
+    </div>   
+        <%= yield %>
+  </div>
 </body>
+
 </html>

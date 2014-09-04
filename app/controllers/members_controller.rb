@@ -2,7 +2,6 @@ class MembersController < ApplicationController
   before_action :set_member, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!, except: :index
 
-
   # GET /members
   # GET /members.json
   def index
