@@ -1,0 +1,16 @@
+<footer>
+  <div class="ui divider"></div>
+	<div class="ui divided horizontal footer link list">
+  <div class="item">American College of Healthcare Executives  &copy; 2014</div>
+  <div class="item">DoCM</div>
+  <div class="item">
+  	<% if admin_signed_in? %>
+  		<%= link_to 'Logout', destroy_admin_session_path, class: 'ui button basic mini', method: :delete %>
+  	<% else %>
+    	<%= link_to 'Admin', members_list_path, class: 'ui button basic mini' %> 
+    <% end %>	
+  </div>
+</div>
+</div>
+</footer>
+

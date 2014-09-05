@@ -1,12 +1,11 @@
-<h1>Edit Board Member</h1>
-
-
-<div class="ui grid aligned center">
-	<div class="column ten wide">
+<div class="ten wide column">
+	<h1>Edit Board Member</h1>
 		<div class="ui segment stacked">
-	 <%= render 'form' %>
+			<div class="lgn">
+				<%= render 'form' %>
+			</div>
 		</div>
-	</div> 
+	<%= link_to 'Back', members_list_path, class: 'ui button basic tiny' %>
 </div>
 
-<%= link_to 'Back', members_list_path, class: 'ui button basic mini' %>
+

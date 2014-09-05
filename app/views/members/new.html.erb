@@ -1,12 +1,10 @@
-<h1 style="line-height:150%">Add New Board Member</h1>
-
- <div class="ui grid aligned center">
-	<div class="column ten wide">
-		<div class="ui segment stacked">
- 			<%= render 'form' %>
- 		</div>
+<div class="ten wide column">
+	<h1>Create New Board Member</h1>
+	<div class="ui segment stacked">
+		<div class="lgn">
+			<%= render 'form' %>
+		</div>
 	</div> 
+	<%= link_to 'Back', members_list_path, class: 'ui button basic mini' %>
 </div>
 
-
-<%= link_to 'Back', members_list_path, class: 'ui button basic mini' %>
