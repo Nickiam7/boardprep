@@ -8,7 +8,6 @@ class MembersController < ApplicationController
     @members = Member.all
   end
 
-
   def list
     @members = Member.all
   end 
