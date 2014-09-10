@@ -17,6 +17,21 @@ $(function(){
 </head>
 
 <body>
+  <div class="ui vertical icon menu blue visible-xs-inline-block visible-sm-inline-block" style="position:fixed; right:0px; top:175px;">
+    <a class="item filter active twitter sort" data-sort="random">
+      <i class="refresh icon"></i>
+    </a>  
+    <a class="item filter" data-filter="all">
+      <i class="table icon"></i>
+    </a>
+    <a class="item filter" data-filter=".chair">
+      <i class="block layout icon"></i>
+    </a>
+    <a class="item filter" data-filter=".gov">
+      <i class="grid layout icon"></i>
+    </a>
+</div>
+
   <div class="ui grid aligned center">
     <div class="twelve column wide">
      <!--Devise Flash Div-->
@@ -27,5 +42,6 @@ $(function(){
         <%= yield %>
         <%= render 'layouts/footer' %>
    </div>
+
 </body>
 </html>
