@@ -1,18 +1,4 @@
-  <div class="ui vertical icon menu blue visible-xs-inline-block visible-sm-inline-block" style="position:fixed; right:0px; top:200px;">
-    <a class="item filter active twitter sort poop" data-sort="random" data-content="Shuffle" data-position="left center">
-      <i class="refresh icon"></i>
-    </a>  
-    <a class="item filter poop" data-filter="all" data-content="All" data-position="left center">
-      <i class="table icon"></i>
-    </a>
-    <a class="item filter poop" data-filter=".chair" data-content="Chairman" data-position="left center">
-      <i class="block layout icon"></i>
-    </a>
-    <a class="item filter poop" data-filter=".gov" data-content="Governors" data-position="left center">
-      <i class="grid layout icon"></i>
-    </a>
-</div>
-
+<%= render 'lilnav' %>
 <div class="ui twelve column wide">
   <div class="ui stackable grid">
       <div class="five wide column floated left">
@@ -32,7 +18,7 @@
   <div class="ui segment blue stacked aligned center" style="margin-bottom:50px;">
     <div id="Container">
         <% @members.each do |member| %>
-          <div class="mix ui segment raised <%="#{member.sort}" %>" style="margin:10px;">
+          <div class="mix ui segment raised <%="#{member.sort}" %>" style="margin:10px; cursor:pointer;">
             <%= image_tag member.photo.url, class: "ui pop rounded image", data: {title: "#{member.name}", content: "#{member.title}"} %>
           </div>
         <% end %>

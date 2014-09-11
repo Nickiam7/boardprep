@@ -40,6 +40,8 @@ body {
     color: #4092cc !important;
 }
 
+
+
 .ui.segment {
     background-color: #ffffff;
     border-radius: 5px;
@@ -82,6 +84,12 @@ body {
 
 .lgn {
   padding:50px 25px;
+}
+
+.lilnav {
+  position:fixed; 
+  right:0px; 
+  top:175px;
 }
 
 .ui.horizontal.list > .item {
