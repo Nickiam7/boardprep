@@ -1,3 +1,17 @@
+<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block lilnav">
+<div class="ui vertical icon menu mini">
+  <div class="blue item">
+    <i class="add sign box icon"></i><%= link_to 'New', new_member_path %>
+  </div>
+  <div class="blue item">
+    <i class="list layout icon"></i><%= link_to 'Sort', root_path %>
+  </div>
+  <div class="blue item">
+    <i class="sign out icon"></i><%= link_to 'Sign Out', destroy_admin_session_path, method: :delete %>
+  </div>
+</div>
+</div>
+
 <div class="ui column twelve wide">
  <h1 style="text-align:left;">Current Members</h1>
     <table class="ui table collapsing segment">
@@ -38,45 +52,32 @@
         </tfoot>	
     </table>
  </div>
+ 
+ <div class="column four wide structions visible-lg-inline">
+  <h4 class="ui top attached header"><i class="circular info icon red small"></i> Hey, Look Over Here!</h4>
 
+  <div class="ui segment attached">
+    <p>New members will automatically appear in the sortable list on the <%= link_to 'Home page', root_path, style: 'color:#4092cc;' %> and on the list to the left.  Here, you can see all entered info, edit the info and delete the member.</p>
+    <div class="ui list">
+      <div class="item">
+       <div class="content">
+        <p>
+          <i class="circular warning icon red"></i> 
+          There is a small bug when returning to the <%= link_to "Sort List", root_path, style: 'color:#4092cc;' %>. The photos may not show up at all. A simple page refresh will fix this bug.</p>
+       </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui bottom attached header aligned center">
+   <div class="ui buttons mini">
+        <%= link_to 'New Member', new_member_path, class: 'ui button linkedin' %>
+        <%= link_to 'Sort List', root_path, class: 'ui button twitter' %>
+   </div> 
+ </div>
 
-        <div class="column four wide computer only structions">
-          <h4 class="ui top attached header"><i class="circular info icon red small"></i> Hey, Look Over Here!</h4>
+</div>
 
-          <div class="ui segment attached">
-            <p>New members will automatically appear in the sortable list on the <%= link_to 'Home page', root_path, style: 'color:#4092cc;' %> and on the list to the left.  Here, you can see all entered info, edit the info and delete the member.</p>
-            <div class="ui list">
-              <div class="item">
-               <div class="content">
-                <p>
-                  <i class="circular warning icon red"></i> 
-                  There is a small bug when returning to the <%= link_to "Sort List", root_path, style: 'color:#4092cc;' %>. The photos may not show up at all. A simple page refresh will fix this bug.</p>
-               </div>
-              </div>
-            </div>
-          </div>
-          <div class="ui bottom attached header aligned center">
-           <div class="ui buttons mini">
-                <%= link_to 'New Member', new_member_path, class: 'ui button linkedin' %>
-                <%= link_to 'Sort List', root_path, class: 'ui button twitter' %>
-           </div> 
-         </div>
-
-        </div>
-
-        <div class="mobile only column four wide structions">
-         <div class="ui vertical buttons">
-          <%= link_to '+ Member', new_member_path, class: 'ui button linkedin' %>
-          <%= link_to 'Sort List', root_path, class: 'ui button twitter' %>
-         </div>
-        </div>
-
-        <div class="tablet only column four wide structions">
-         <div class="ui vertical buttons">
-          <%= link_to '+ Member', new_member_path, class: 'ui button linkedin' %>
-          <%= link_to 'Sort List', root_path, class: 'ui button twitter' %>
-        </div>
-        </div>
+        
      
 
         
