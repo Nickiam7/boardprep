@@ -1,7 +1,7 @@
 <%= form_for(@member) do |f| %>
   <% if @member.errors.any? %>
     <div id="error_explanation" class="ui red message">
-      <h2><%= pluralize(@member.errors.count, "error") %> prohibited this member from being saved:</h2>
+      <h2><strong>NO!</strong> You can't do that. Fix the <%= pluralize(@member.errors.count, "error") %> NOW, DO IT NOW!</h2>
 
       <ul>
       <% @member.errors.full_messages.each do |message| %>
@@ -22,23 +22,6 @@
      </div>
   </div>
 
-<!--THIS DOES NOT WORK YET- - :( 
-===========================================
-
-<div class="ui selection dropdown">
-  <input name="sort" type="hidden">
-    <div class="default text">Sort by</div>
-     <i class="dropdown icon"></i>
-      <select class="menu" id="member_sort" name="member[sort]">
-        <option class="item" value="chair">Chairman</option>
-        <option class="item" value="gov">Governor</option>
-       </select>
-</div>   
-
-<div class="ui pointing left label">Double Check this is Right!</div>
-<br><br>
-==============================================-->
-
    <div class="ui form">
     <div class="ui six fields">
        <div class="field"  style="margin-right: 30px;">
@@ -52,7 +35,7 @@
       </div>
     </div>
    </div>
-<br><br>
+    <br><br>
   <div class="actions">
     <%= f.submit class: 'ui button green small' %>
   </div>
