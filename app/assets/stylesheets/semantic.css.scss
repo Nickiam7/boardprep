@@ -16,15 +16,23 @@ a {
 body {
     margin:0; 
     border-top: 3px solid #4092cc; 
-    color: #5c6166; 
+    color: #62717a; 
     background: url('http://www.ache.org/images/bg-gray.png');
-    color: #333;
     font-family: verdana, arial, helvetica, sans-serif;
     font-size: 0.8em;
     }
 
 .ui.table {
     font-size: 1em;
+}
+
+.ui.table th {
+    background: linear-gradient(to bottom, #fcfcfc, #eee) repeat scroll 0 0 #f4f4f4;
+    color: #62717a; 
+    cursor: auto;
+    padding: 0.5em 0.7em;
+    text-align: left;
+    vertical-align: middle;
 }
 
 .ui.grid > .column, .ui.grid > .row > .column {
@@ -96,6 +104,12 @@ body {
     display: inline-block;
     font-size: 0.7rem;
     margin-left: 1em;
+}
+
+ .ui.attached.header {
+    background: linear-gradient(to bottom, #fcfcfc, #eee) repeat scroll 0 0 #f4f4f4;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    padding: 0.5em 1rem;
 }
 
 @-ms-viewport {
