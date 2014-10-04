@@ -30,6 +30,8 @@ gem "paperclip", "~> 4.1"
 
 gem 'devise', '~> 3.3.0'
 
+gem 'jquery-turbolinks'
+
 group :development, :test do
      gem 'sqlite3'
 end
