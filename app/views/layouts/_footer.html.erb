@@ -6,7 +6,7 @@
   <div class="item">
   	<% if admin_signed_in? %>
     <div class="ui basic buttons">
-  		<%= link_to 'Logout', destroy_admin_session_path, class: 'ui button basic mini', method: :delete %>
+  		<%= link_to 'Sign Out', destroy_admin_session_path, class: 'ui button basic mini', method: :delete %>
       <%= link_to 'Sort List', root_path, class: 'ui button basic mini' %>
       <%= link_to 'Admin', members_list_path, class: 'ui button basic mini' %>
     </div>

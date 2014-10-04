@@ -1,7 +1,7 @@
 <%= form_for(@member) do |f| %>
   <% if @member.errors.any? %>
     <div id="error_explanation" class="ui red message">
-      <h2><strong>NO!</strong> You can't do that. Fix the <%= pluralize(@member.errors.count, "error") %> NOW, DO IT NOW!</h2>
+      <h2><strong>Sorry</strong>, you need to fix the <%= pluralize(@member.errors.count, "error") %> to continue.</h2>
 
       <ul>
       <% @member.errors.full_messages.each do |message| %>
