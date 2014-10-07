@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
 //= require semantic-ui
 //= require jquery.mixitup
 //= require_tree .
