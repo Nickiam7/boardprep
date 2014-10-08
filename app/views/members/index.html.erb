@@ -19,7 +19,7 @@
     <div id="Container">
         <% @members.each do |member| %>
           <div class="mix ui segment raised <%="#{member.sort}" %>" style="margin:10px; cursor:pointer;">
-            <%= image_tag member.photo.url, class: "ui pop rounded image", data: {title: "#{member.name}", content: "#{member.title}"} %>
+            <%= image_tag member.photo.url, class: "ui pop rounded image", data: { variation: "large", title: "#{member.name}", content: "#{member.title}"} %>
           </div>
         <% end %>
     </div>
