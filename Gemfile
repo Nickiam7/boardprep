@@ -31,6 +31,8 @@ gem 'spring',        group: :development
 
 gem "paperclip", "~> 4.1"
 
+gem 'aws-sdk', '~> 1.55.0'
+
 gem 'devise', '~> 3.3.0'
 
 group :development, :test do

@@ -81,6 +81,20 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  #Required by Devise. **Set to Actual HOST.
+  # Required by Devise. **Set to Actual HOST.
   config.action_mailer.default_url_options = { host: 'boardprep.herokuapp.com' }
+
+  # For images AWS3
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['S3_BUCKET_NAME'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+  }
+}
+
+
+
+
 end
