@@ -1,29 +1,34 @@
 <%= render 'lilnav' %>
 <div class="ui twelve column wide">
+
   <div class="ui stackable grid">
       <div class="five wide column floated left">
         <a href="http://www.ache.org"><img src="http://ache.org/images/logo.png" class="image" /></a>
       </div>
       <div class="visible-lg-inline">
-      <div class="ten wide column floated aligned right">
-          <div class="ui icon twitter button poop sort active " data-content="Shuffle" data-position="left center" data-sort="random" style="margin:40px 10px 0 0;"><i class="refresh icon"></i></div>
+        <div class="ten wide column floated aligned right padr">
+            <div class="ui icon twitter button poop sort active " data-content="Shuffle" data-position="left center" data-sort="random" style="margin:40px 10px 0 0;"><i class="refresh icon"></i></div>
             <div class="ui compact menu blue" style="margin-top:40px;">
               <a class="item filter active" data-filter="all">All</a>
               <a class="item filter" data-filter=".chair">Chairman</a>
               <a class="item filter" data-filter=".gov">Governors</a>
             </div>
-      </div> 
+            <br>
+            <div class="ui button basic mini tint fluid" style="margin:10px 100px 0 0;"><i class="adjust icon"></i> Toggle Color</div>
+        </div> 
       </div>
   </div>
-  <div class="ui segment blue stacked aligned center" style="margin-bottom:50px;">
+
+  <div class="ui segment stacked aligned center" style="margin-bottom:50px;">
     <div id="Container">
         <% @members.each do |member| %>
           <div class="mix ui segment raised <%="#{member.sort}" %>" style="margin:10px; cursor:pointer;">
-            <%= image_tag member.photo.url, class: "ui pop rounded image", data: { title: "#{member.name}", content: "#{member.title}"} %>
+            <%= image_tag member.photo.url, class: "ui pop rounded image darker", data: { title: "#{member.name}", content: "#{member.title}"} %>
           </div>
         <% end %>
     </div>
   </div>
+
 </div>
 
 
