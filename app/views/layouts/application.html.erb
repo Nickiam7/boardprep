@@ -10,7 +10,6 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
 <script>
 $(function(){
   $('#Container').mixItUp();  
@@ -20,20 +19,18 @@ $(function(){
    $(".darker").toggleClass("desaturate");
   });
 });
-
 </script>
 </head>
+  <body>
+    <div class="twelve column wide" style="text-align:center; border-bottom:1px solid #4092cc;">
+        <% flash.each do |name, msg| %>
+           <%= content_tag(:div, msg, class: "ui message info") %>
+        <% end %>
+    </div> 
+    <div class="ui grid aligned center">  
+          <%= yield %>
+          <%= render 'layouts/footer' %>
+     </div>
 
-<body>
-  <div class="twelve column wide" style="text-align:center; border-bottom:1px solid #4092cc;">
-      <% flash.each do |name, msg| %>
-         <%= content_tag(:div, msg, class: "ui message info") %>
-      <% end %>
-  </div> 
-  <div class="ui grid aligned center">  
-        <%= yield %>
-        <%= render 'layouts/footer' %>
-   </div>
-
-</body>
+  </body>
 </html>

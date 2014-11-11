@@ -1,4 +1,5 @@
 <%= render 'lilnav' %>
+
 <div class="ui twelve column wide">
 
   <div class="ui stackable grid">
@@ -19,10 +20,10 @@
       </div>
   </div>
 
-  <div class="ui segment stacked aligned center" style="margin-bottom:50px;">
+  <div class="ui segment stacked aligned center" style="margin-bottom:15px;">
     <div id="Container">
         <% @members.each do |member| %>
-          <div class="mix ui segment raised <%="#{member.sort}" %>" style="margin:10px; cursor:pointer;">
+          <div class="mix ui segment raised <%= "#{member.sort}" %>" style="margin:10px; cursor:pointer;">
             <%= image_tag member.photo.url, class: "ui pop rounded image darker", data: { title: "#{member.name}", content: "#{member.title}"} %>
           </div>
         <% end %>
